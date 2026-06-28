@@ -47,7 +47,7 @@ function App() {
   const navigate = id => { location.hash = id; };
   const refresh = () => setTick(value => value + 1);
   const favorites = storage.favorites(); const savedExpressions = storage.expressions();
-  const progress = { labs: storage.labs().length, scenarios: storage.scenarios().length, commands: favorites.length, expressions: savedExpressions.length, quizzes: storage.quizzes().length, stage: storage.stage() };
+  const progress = { labs: storage.labs().length, scenarios: storage.scenarios().length, commands: favorites.length, expressions: savedExpressions.length, quizzes: storage.quizzes().length, notes: storage.notes().length, stage: storage.stage() };
   const content = {
     home: <Home navigate={navigate} progress={progress} openQuiz={() => setQuizOpen(true)} />,
     commands: <Commands favorites={favorites} refresh={refresh} />, troubleshooting: <Troubleshooting refresh={refresh} />, network: <Network />, systemd: <Systemd />,
@@ -61,14 +61,50 @@ function App() {
   </div>;
 }
 
+function getOpsLevel(score) {
+  if (score >= 16) return { name: "Level 4: Junior DevOps", pct: 100 };
+  if (score >= 10) return { name: "Level 3: Docker Operator", pct: 74 };
+  if (score >= 5) return { name: "Level 2: Linux Troubleshooter", pct: 48 };
+  return { name: "Level 1: Ops Trainee", pct: 22 };
+}
+
 function Home({ navigate, progress, openQuiz }) {
+  const [missionDone, setMissionDone] = useState(storage.opsMission());
+  const toggleMission = id => {
+    const next = storage.toggle(storage.keys.opsMission, id);
+    setMissionDone(next);
+  };
   const cards = [["commands","Linux 基础命令","38 个工作场景命令卡"],["troubleshooting","Linux 故障排查","15 个真实排障思路"],["network","网络诊断","从 DNS 到防火墙流程"],["systemd","Systemd 服务管理","服务与日志排查"],["docker","Docker 实验室","6 个模拟容器实验"],["k3s","K3s / Kubernetes","从 Pod 到 Events"],["english","英文工单表达","30 条中英工作表达"],["notes","我的实验记录","沉淀你的技术作品集"]];
-  return <><section className="hero"><div><p className="eyebrow">OPERATIONS PRACTICE STATION</p><h1>WeiOps Lab</h1><h2>阿伟运维实验室</h2><p className="hero-text">这里不是命令大全，而是一个面向真实工作的运维实战训练站。</p><div className="hero-actions"><button onClick={() => navigate("troubleshooting")}>进入故障训练</button><button className="secondary" onClick={openQuiz}>做一题测验</button></div></div><TerminalBlock title="今日训练提示" commandsText={"systemctl status nginx\nss -lntp | grep 8080\ncurl -I http://127.0.0.1:8080"} /></section>
-    <section className="stats"><Stat label="已完成实验" value={progress.labs} /><Stat label="已掌握命令" value={progress.commands} /><Stat label="故障场景" value={progress.scenarios} /><Stat label="收藏表达" value={progress.expressions} /><Stat label="测验记录" value={progress.quizzes} /></section>
+  const missionItems = [
+    { id: "incident", label: "完成 1 个故障任务", hint: "Incident Response", target: "troubleshooting", done: progress.scenarios >= 1 },
+    { id: "error", label: "解码 1 个错误", hint: "Error Card", target: "troubleshooting", done: progress.quizzes >= 1 },
+    { id: "speaking", label: "跟读 3 句英文", hint: "English Speaking Drill", target: "english", done: progress.expressions >= 3 },
+    { id: "command", label: "收藏 1 条命令链路", hint: "Command Chain", target: "commands", done: progress.commands >= 1 },
+    { id: "note", label: "写 1 条实验记录", hint: "Lab Note", target: "notes", done: progress.notes >= 1 }
+  ];
+  const completedMissions = missionItems.filter(item => item.done || missionDone.includes(item.id)).length;
+  const totalScore = progress.labs + progress.scenarios + progress.commands + progress.expressions + progress.quizzes + progress.notes + completedMissions;
+  const level = getOpsLevel(totalScore);
+  const errorUnlocked = Math.min(20, 8 + progress.scenarios + progress.quizzes);
+  const speakingToday = Math.min(5, progress.expressions);
+
+  return <><section className="hero mission-hero"><div><p className="eyebrow">OPS MISSION CONTROL</p><h1>WeiOps Lab</h1><h2>Professional incident training dashboard</h2><p className="hero-text">把 Linux、Docker、K3s、英文工单和实验记录组织成每天可执行的运维任务。</p><div className="hero-actions"><button onClick={() => navigate("troubleshooting")}>Start Incident Mission</button><button className="secondary" onClick={openQuiz}>Run Quick Check</button></div></div><TerminalBlock title="Mission bootstrap" commandsText={"systemctl status nginx\njournalctl -u nginx -n 50\ncurl -I http://127.0.0.1:8080"} /></section>
+    <section className="ops-dashboard">
+      <article className="mission-panel">
+        <header><div><p>TODAY'S OPS MISSION</p><h2>今日任务区</h2></div><strong>{completedMissions}/5</strong></header>
+        <div className="mission-list">{missionItems.map(item => <div className={item.done || missionDone.includes(item.id) ? "mission-item done" : "mission-item"} key={item.id}><button onClick={() => toggleMission(item.id)} aria-label={item.label}>{item.done || missionDone.includes(item.id) ? "✓" : "+"}</button><div><b>{item.label}</b><span>{item.hint}</span></div><button className="jump" onClick={() => navigate(item.target)}>Go</button></div>)}</div>
+      </article>
+      <article className="mission-card primary"><p>MISSION MODE</p><h3>故障任务入口</h3><button onClick={() => navigate("troubleshooting")}>Start Incident Mission</button><small>从现象、命令、日志和英文描述完成一次排障闭环。</small></article>
+      <article className="mission-card"><p>ERROR CARDS</p><h3>已解锁错误 {errorUnlocked} / 20</h3><ProgressBar value={errorUnlocked} max={20} /><small>通过故障场景和测验逐步收集常见错误卡片。</small></article>
+      <article className="mission-card"><p>ENGLISH SPEAKING DRILL</p><h3>今日跟读 {speakingToday} / 5</h3><ProgressBar value={speakingToday} max={5} /><small>从工单表达里挑选英文句子，进行跟读和复述。</small></article>
+      <article className="mission-card level-card"><p>PROGRESS LEVEL</p><h3>{level.name}</h3><ProgressBar value={level.pct} max={100} /><small>完成任务越多，等级越接近真实 DevOps 工作流。</small></article>
+    </section>
+    <section className="stats"><Stat label="已完成实验" value={progress.labs} /><Stat label="已掌握命令" value={progress.commands} /><Stat label="故障场景" value={progress.scenarios} /><Stat label="收藏表达" value={progress.expressions} /><Stat label="实验记录" value={progress.notes} /></section>
     <section className="section-head"><div><p>LEARNING MODULES</p><h2>按真实工作场景训练</h2></div></section><section className="module-grid">{cards.map(([id, title, desc], index) => <button className="module-card" key={id} onClick={() => navigate(id)}><span>0{index + 1}</span><strong>{title}</strong><small>{desc}</small><b>进入模块 →</b></button>)}</section>
     <section className="route"><div><p>PATH</p><h2>从基础命令到 DevOps</h2></div><ol>{["Linux 基础","网络与服务排障","Shell 基础","Docker","K3s / Kubernetes","CI/CD","监控与日志","DevOps 实战"].map((step, index) => <li key={step}><span>{index + 1}</span>{step}</li>)}</ol></section>
   </>;
 }
+function ProgressBar({ value, max }) { return <div className="progress-track"><span style={{ width: `${Math.min(100, Math.round(value / max * 100))}%` }}></span></div>; }
 function Stat({ label, value }) { return <div><strong>{value}</strong><span>{label}</span></div>; }
 
 function Commands({ favorites, refresh }) {

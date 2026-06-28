@@ -5,7 +5,8 @@ const KEYS = {
   expressions: "weiops_favorite_expressions",
   quiz: "weiops_quiz_results",
   notes: "weiops_lab_notes",
-  stage: "weiops_current_stage"
+  stage: "weiops_current_stage",
+  opsMission: "weiops_today_ops_mission"
 };
 
 function read(key, fallback) {
@@ -30,5 +31,6 @@ export const storage = {
   scenarios: () => read(KEYS.scenarios, []),
   quizzes: () => read(KEYS.quiz, []),
   notes: () => read(KEYS.notes, []),
+  opsMission: () => read(KEYS.opsMission, []),
   stage: () => read(KEYS.stage, "阶段一：Linux 基础")
 };

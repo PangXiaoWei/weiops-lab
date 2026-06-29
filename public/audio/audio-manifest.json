@@ -1,5 +1,534 @@
 {
-  "updatedAt": "2026-06-28T08:04:32.868Z",
+  "updatedAt": "2026-06-29T04:37:21.328Z",
   "mode": "local-mp3-first",
-  "items": {}
+  "items": {
+    "dashboard-ops-mission-control": {
+      "text": "OPS MISSION CONTROL",
+      "path": "audio/en-us/ops/dashboard-ops-mission-control.mp3"
+    },
+    "dashboard-weiops-lab": {
+      "text": "WeiOps Lab",
+      "path": "audio/en-us/ops/dashboard-weiops-lab.mp3"
+    },
+    "dashboard-professional-incident-training-dashboard": {
+      "text": "Professional incident training dashboard",
+      "path": "audio/en-us/ops/dashboard-professional-incident-training-dashboard.mp3"
+    },
+    "start-incident-mission": {
+      "text": "Start Incident Mission",
+      "path": "audio/en-us/ops/start-incident-mission.mp3"
+    },
+    "run-quick-check": {
+      "text": "Run Quick Check",
+      "path": "audio/en-us/ops/run-quick-check.mp3"
+    },
+    "mission-mode": {
+      "text": "MISSION MODE",
+      "path": "audio/en-us/ops/mission-mode.mp3"
+    },
+    "error-cards": {
+      "text": "ERROR CARDS",
+      "path": "audio/en-us/ops/error-cards.mp3"
+    },
+    "english-speaking-drill": {
+      "text": "ENGLISH SPEAKING DRILL",
+      "path": "audio/en-us/ops/english-speaking-drill.mp3"
+    },
+    "progress-level": {
+      "text": "PROGRESS LEVEL",
+      "path": "audio/en-us/ops/progress-level.mp3"
+    },
+    "case-flow": {
+      "text": "CASE FLOW",
+      "path": "audio/en-us/ops/case-flow.mp3"
+    },
+    "work-ticket": {
+      "text": "WORK TICKET",
+      "path": "audio/en-us/ops/work-ticket.mp3"
+    },
+    "command-name-ls": {
+      "text": "ls",
+      "path": "audio/en-us/ops/command-name-ls.mp3"
+    },
+    "command-english-ls": {
+      "text": "I used ls to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-ls.mp3"
+    },
+    "command-name-cd": {
+      "text": "cd",
+      "path": "audio/en-us/ops/command-name-cd.mp3"
+    },
+    "command-english-cd": {
+      "text": "I used cd to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-cd.mp3"
+    },
+    "command-name-pwd": {
+      "text": "pwd",
+      "path": "audio/en-us/ops/command-name-pwd.mp3"
+    },
+    "command-english-pwd": {
+      "text": "I used pwd to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-pwd.mp3"
+    },
+    "command-name-mkdir": {
+      "text": "mkdir",
+      "path": "audio/en-us/ops/command-name-mkdir.mp3"
+    },
+    "command-english-mkdir": {
+      "text": "I used mkdir to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-mkdir.mp3"
+    },
+    "command-name-touch": {
+      "text": "touch",
+      "path": "audio/en-us/ops/command-name-touch.mp3"
+    },
+    "command-english-touch": {
+      "text": "I used touch to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-touch.mp3"
+    },
+    "command-name-cp": {
+      "text": "cp",
+      "path": "audio/en-us/ops/command-name-cp.mp3"
+    },
+    "command-english-cp": {
+      "text": "I used cp to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-cp.mp3"
+    },
+    "command-name-mv": {
+      "text": "mv",
+      "path": "audio/en-us/ops/command-name-mv.mp3"
+    },
+    "command-english-mv": {
+      "text": "I used mv to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-mv.mp3"
+    },
+    "command-name-rm": {
+      "text": "rm",
+      "path": "audio/en-us/ops/command-name-rm.mp3"
+    },
+    "command-english-rm": {
+      "text": "I used rm to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-rm.mp3"
+    },
+    "command-name-cat": {
+      "text": "cat",
+      "path": "audio/en-us/ops/command-name-cat.mp3"
+    },
+    "command-english-cat": {
+      "text": "I used cat to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-cat.mp3"
+    },
+    "command-name-less": {
+      "text": "less",
+      "path": "audio/en-us/ops/command-name-less.mp3"
+    },
+    "command-english-less": {
+      "text": "I used less to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-less.mp3"
+    },
+    "command-name-head": {
+      "text": "head",
+      "path": "audio/en-us/ops/command-name-head.mp3"
+    },
+    "command-english-head": {
+      "text": "I used head to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-head.mp3"
+    },
+    "command-name-tail": {
+      "text": "tail",
+      "path": "audio/en-us/ops/command-name-tail.mp3"
+    },
+    "command-english-tail": {
+      "text": "I used tail to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-tail.mp3"
+    },
+    "command-name-grep": {
+      "text": "grep",
+      "path": "audio/en-us/ops/command-name-grep.mp3"
+    },
+    "command-english-grep": {
+      "text": "I used grep to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-grep.mp3"
+    },
+    "command-name-find": {
+      "text": "find",
+      "path": "audio/en-us/ops/command-name-find.mp3"
+    },
+    "command-english-find": {
+      "text": "I used find to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-find.mp3"
+    },
+    "command-name-awk": {
+      "text": "awk",
+      "path": "audio/en-us/ops/command-name-awk.mp3"
+    },
+    "command-english-awk": {
+      "text": "I used awk to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-awk.mp3"
+    },
+    "command-name-sed": {
+      "text": "sed",
+      "path": "audio/en-us/ops/command-name-sed.mp3"
+    },
+    "command-english-sed": {
+      "text": "I used sed to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-sed.mp3"
+    },
+    "command-name-chmod": {
+      "text": "chmod",
+      "path": "audio/en-us/ops/command-name-chmod.mp3"
+    },
+    "command-english-chmod": {
+      "text": "I used chmod to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-chmod.mp3"
+    },
+    "command-name-chown": {
+      "text": "chown",
+      "path": "audio/en-us/ops/command-name-chown.mp3"
+    },
+    "command-english-chown": {
+      "text": "I used chown to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-chown.mp3"
+    },
+    "command-name-ps": {
+      "text": "ps",
+      "path": "audio/en-us/ops/command-name-ps.mp3"
+    },
+    "command-english-ps": {
+      "text": "I used ps to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-ps.mp3"
+    },
+    "command-name-top": {
+      "text": "top",
+      "path": "audio/en-us/ops/command-name-top.mp3"
+    },
+    "command-english-top": {
+      "text": "I used top to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-top.mp3"
+    },
+    "command-name-htop": {
+      "text": "htop",
+      "path": "audio/en-us/ops/command-name-htop.mp3"
+    },
+    "command-english-htop": {
+      "text": "I used htop to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-htop.mp3"
+    },
+    "command-name-kill": {
+      "text": "kill",
+      "path": "audio/en-us/ops/command-name-kill.mp3"
+    },
+    "command-english-kill": {
+      "text": "I used kill to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-kill.mp3"
+    },
+    "command-name-df-h": {
+      "text": "df -h",
+      "path": "audio/en-us/ops/command-name-df-h.mp3"
+    },
+    "command-english-df-h": {
+      "text": "I used df -h to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-df-h.mp3"
+    },
+    "command-name-du-sh": {
+      "text": "du -sh",
+      "path": "audio/en-us/ops/command-name-du-sh.mp3"
+    },
+    "command-english-du-sh": {
+      "text": "I used du -sh to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-du-sh.mp3"
+    },
+    "command-name-free-h": {
+      "text": "free -h",
+      "path": "audio/en-us/ops/command-name-free-h.mp3"
+    },
+    "command-english-free-h": {
+      "text": "I used free -h to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-free-h.mp3"
+    },
+    "command-name-uptime": {
+      "text": "uptime",
+      "path": "audio/en-us/ops/command-name-uptime.mp3"
+    },
+    "command-english-uptime": {
+      "text": "I used uptime to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-uptime.mp3"
+    },
+    "command-name-uname-a": {
+      "text": "uname -a",
+      "path": "audio/en-us/ops/command-name-uname-a.mp3"
+    },
+    "command-english-uname-a": {
+      "text": "I used uname -a to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-uname-a.mp3"
+    },
+    "command-name-ip-addr": {
+      "text": "ip addr",
+      "path": "audio/en-us/ops/command-name-ip-addr.mp3"
+    },
+    "command-english-ip-addr": {
+      "text": "I used ip addr to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-ip-addr.mp3"
+    },
+    "command-name-ping": {
+      "text": "ping",
+      "path": "audio/en-us/ops/command-name-ping.mp3"
+    },
+    "command-english-ping": {
+      "text": "I used ping to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-ping.mp3"
+    },
+    "command-name-curl": {
+      "text": "curl",
+      "path": "audio/en-us/ops/command-name-curl.mp3"
+    },
+    "command-english-curl": {
+      "text": "I used curl to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-curl.mp3"
+    },
+    "command-name-wget": {
+      "text": "wget",
+      "path": "audio/en-us/ops/command-name-wget.mp3"
+    },
+    "command-english-wget": {
+      "text": "I used wget to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-wget.mp3"
+    },
+    "command-name-ss-lntp": {
+      "text": "ss -lntp",
+      "path": "audio/en-us/ops/command-name-ss-lntp.mp3"
+    },
+    "command-english-ss-lntp": {
+      "text": "I used ss -lntp to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-ss-lntp.mp3"
+    },
+    "command-name-netstat": {
+      "text": "netstat",
+      "path": "audio/en-us/ops/command-name-netstat.mp3"
+    },
+    "command-english-netstat": {
+      "text": "I used netstat to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-netstat.mp3"
+    },
+    "command-name-tar": {
+      "text": "tar",
+      "path": "audio/en-us/ops/command-name-tar.mp3"
+    },
+    "command-english-tar": {
+      "text": "I used tar to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-tar.mp3"
+    },
+    "command-name-systemctl": {
+      "text": "systemctl",
+      "path": "audio/en-us/ops/command-name-systemctl.mp3"
+    },
+    "command-english-systemctl": {
+      "text": "I used systemctl to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-systemctl.mp3"
+    },
+    "command-name-journalctl": {
+      "text": "journalctl",
+      "path": "audio/en-us/ops/command-name-journalctl.mp3"
+    },
+    "command-english-journalctl": {
+      "text": "I used journalctl to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-journalctl.mp3"
+    },
+    "command-name-ssh": {
+      "text": "ssh",
+      "path": "audio/en-us/ops/command-name-ssh.mp3"
+    },
+    "command-english-ssh": {
+      "text": "I used ssh to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-ssh.mp3"
+    },
+    "command-name-scp": {
+      "text": "scp",
+      "path": "audio/en-us/ops/command-name-scp.mp3"
+    },
+    "command-english-scp": {
+      "text": "I used scp to investigate the issue and verified the result.",
+      "path": "audio/en-us/ops/command-english-scp.mp3"
+    },
+    "scenario-english-scenario-1": {
+      "text": "The website was not accessible. I first checked the service and port listener.",
+      "path": "audio/en-us/ops/scenario-english-scenario-1.mp3"
+    },
+    "scenario-english-scenario-2": {
+      "text": "The service failed to start, so I checked its status and logs.",
+      "path": "audio/en-us/ops/scenario-english-scenario-2.mp3"
+    },
+    "scenario-english-scenario-3": {
+      "text": "I found that the port was already in use.",
+      "path": "audio/en-us/ops/scenario-english-scenario-3.mp3"
+    },
+    "scenario-english-scenario-4": {
+      "text": "The /var partition was almost full.",
+      "path": "audio/en-us/ops/scenario-english-scenario-4.mp3"
+    },
+    "scenario-english-scenario-5": {
+      "text": "I identified the process consuming high CPU.",
+      "path": "audio/en-us/ops/scenario-english-scenario-5.mp3"
+    },
+    "scenario-english-scenario-6": {
+      "text": "The host was under memory pressure.",
+      "path": "audio/en-us/ops/scenario-english-scenario-6.mp3"
+    },
+    "scenario-english-scenario-7": {
+      "text": "I found an oversized log file.",
+      "path": "audio/en-us/ops/scenario-english-scenario-7.mp3"
+    },
+    "scenario-english-scenario-8": {
+      "text": "The issue may be related to permission settings.",
+      "path": "audio/en-us/ops/scenario-english-scenario-8.mp3"
+    },
+    "scenario-english-scenario-9": {
+      "text": "I checked the SSH service and port 22.",
+      "path": "audio/en-us/ops/scenario-english-scenario-9.mp3"
+    },
+    "scenario-english-scenario-10": {
+      "text": "I checked DNS resolution and network connectivity.",
+      "path": "audio/en-us/ops/scenario-english-scenario-10.mp3"
+    },
+    "scenario-english-scenario-11": {
+      "text": "I checked the container logs and exit code.",
+      "path": "audio/en-us/ops/scenario-english-scenario-11.mp3"
+    },
+    "scenario-english-scenario-12": {
+      "text": "The Nginx configuration test reported an error.",
+      "path": "audio/en-us/ops/scenario-english-scenario-12.mp3"
+    },
+    "scenario-english-scenario-13": {
+      "text": "I verified the system time synchronization.",
+      "path": "audio/en-us/ops/scenario-english-scenario-13.mp3"
+    },
+    "scenario-english-scenario-14": {
+      "text": "The service was restarting repeatedly, so I reviewed the failure logs.",
+      "path": "audio/en-us/ops/scenario-english-scenario-14.mp3"
+    },
+    "scenario-english-scenario-15": {
+      "text": "The service was listening locally, but the firewall blocked external access.",
+      "path": "audio/en-us/ops/scenario-english-scenario-15.mp3"
+    },
+    "expression-expression-1": {
+      "text": "The service failed to start. I checked the logs and found that the port was already in use.",
+      "path": "audio/en-us/ops/expression-expression-1.mp3"
+    },
+    "expression-expression-2": {
+      "text": "I restarted the service, and the website is now accessible.",
+      "path": "audio/en-us/ops/expression-expression-2.mp3"
+    },
+    "expression-expression-3": {
+      "text": "I am checking DNS resolution and network connectivity.",
+      "path": "audio/en-us/ops/expression-expression-3.mp3"
+    },
+    "expression-expression-4": {
+      "text": "This issue may be related to permission settings.",
+      "path": "audio/en-us/ops/expression-expression-4.mp3"
+    },
+    "expression-expression-5": {
+      "text": "The /var partition was almost full.",
+      "path": "audio/en-us/ops/expression-expression-5.mp3"
+    },
+    "expression-expression-6": {
+      "text": "I confirmed that the account does not have the required permission.",
+      "path": "audio/en-us/ops/expression-expression-6.mp3"
+    },
+    "expression-expression-7": {
+      "text": "The deployment is complete, and I am validating the service health.",
+      "path": "audio/en-us/ops/expression-expression-7.mp3"
+    },
+    "expression-expression-8": {
+      "text": "The container did not start, and I am checking the logs and exit code.",
+      "path": "audio/en-us/ops/expression-expression-8.mp3"
+    },
+    "expression-expression-9": {
+      "text": "The pod failed because Kubernetes could not pull the image.",
+      "path": "audio/en-us/ops/expression-expression-9.mp3"
+    },
+    "expression-expression-10": {
+      "text": "The logs show that the configuration file contains a syntax error.",
+      "path": "audio/en-us/ops/expression-expression-10.mp3"
+    },
+    "expression-expression-11": {
+      "text": "The issue has been resolved, and I will continue to monitor the service.",
+      "path": "audio/en-us/ops/expression-expression-11.mp3"
+    },
+    "expression-expression-12": {
+      "text": "The service failed to start. I checked the logs and found that the port was already in use.",
+      "path": "audio/en-us/ops/expression-expression-12.mp3"
+    },
+    "expression-expression-13": {
+      "text": "I restarted the service, and the website is now accessible.",
+      "path": "audio/en-us/ops/expression-expression-13.mp3"
+    },
+    "expression-expression-14": {
+      "text": "I am checking DNS resolution and network connectivity.",
+      "path": "audio/en-us/ops/expression-expression-14.mp3"
+    },
+    "expression-expression-15": {
+      "text": "This issue may be related to permission settings.",
+      "path": "audio/en-us/ops/expression-expression-15.mp3"
+    },
+    "expression-expression-16": {
+      "text": "The /var partition was almost full.",
+      "path": "audio/en-us/ops/expression-expression-16.mp3"
+    },
+    "expression-expression-17": {
+      "text": "I confirmed that the account does not have the required permission.",
+      "path": "audio/en-us/ops/expression-expression-17.mp3"
+    },
+    "expression-expression-18": {
+      "text": "The deployment is complete, and I am validating the service health.",
+      "path": "audio/en-us/ops/expression-expression-18.mp3"
+    },
+    "expression-expression-19": {
+      "text": "The container did not start, and I am checking the logs and exit code.",
+      "path": "audio/en-us/ops/expression-expression-19.mp3"
+    },
+    "expression-expression-20": {
+      "text": "The pod failed because Kubernetes could not pull the image.",
+      "path": "audio/en-us/ops/expression-expression-20.mp3"
+    },
+    "expression-expression-21": {
+      "text": "The logs show that the configuration file contains a syntax error.",
+      "path": "audio/en-us/ops/expression-expression-21.mp3"
+    },
+    "expression-expression-22": {
+      "text": "The issue has been resolved, and I will continue to monitor the service.",
+      "path": "audio/en-us/ops/expression-expression-22.mp3"
+    },
+    "expression-expression-23": {
+      "text": "The service failed to start. I checked the logs and found that the port was already in use.",
+      "path": "audio/en-us/ops/expression-expression-23.mp3"
+    },
+    "expression-expression-24": {
+      "text": "I restarted the service, and the website is now accessible.",
+      "path": "audio/en-us/ops/expression-expression-24.mp3"
+    },
+    "expression-expression-25": {
+      "text": "I am checking DNS resolution and network connectivity.",
+      "path": "audio/en-us/ops/expression-expression-25.mp3"
+    },
+    "expression-expression-26": {
+      "text": "This issue may be related to permission settings.",
+      "path": "audio/en-us/ops/expression-expression-26.mp3"
+    },
+    "expression-expression-27": {
+      "text": "The /var partition was almost full.",
+      "path": "audio/en-us/ops/expression-expression-27.mp3"
+    },
+    "expression-expression-28": {
+      "text": "I confirmed that the account does not have the required permission.",
+      "path": "audio/en-us/ops/expression-expression-28.mp3"
+    },
+    "expression-expression-29": {
+      "text": "The deployment is complete, and I am validating the service health.",
+      "path": "audio/en-us/ops/expression-expression-29.mp3"
+    },
+    "expression-expression-30": {
+      "text": "The container did not start, and I am checking the logs and exit code.",
+      "path": "audio/en-us/ops/expression-expression-30.mp3"
+    }
+  }
 }
